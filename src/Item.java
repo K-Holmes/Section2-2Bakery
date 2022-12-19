@@ -1,6 +1,8 @@
 public interface Item {
+    //constants
     int QUANTITY = 1;
     String msg = "";
+    //abstract methods
     public String getItemName();
     public double getPrice();
     public void setPrice(double price);

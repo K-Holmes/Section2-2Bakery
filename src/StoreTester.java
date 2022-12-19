@@ -4,13 +4,17 @@ public class StoreTester {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        //intro
         System.out.println("Hey there new hire! I'm Jordan, Mr Business-Owner " +
                 "told me to show you the reins. So welcome to the Store!");
         System.out.println("We have cookies, hotdogs, and sandwiches for sale. " +
                 "I need you to mark up the food. \nLet's start off with cookies. " +
                 "Are you ready? (y/n)");
+
+        //start program
         String ready = sc.next();
         if (ready.equalsIgnoreCase("y")){
+            //gathers data for each class
             System.out.println("\nGood! First, what kind of cookies should we make?");
             String cookieType = sc.next();
             System.out.println("Okay, now how much should 1 cost?");
@@ -23,6 +27,7 @@ public class StoreTester {
             double hotdogPrice = sc.nextDouble();
             System.out.println("Okay, allow me to showcase your menu.");
 
+            //prints out data via interface/classes
             Cookie c = new Cookie (cookieType, cookiePrice);
             Item i =c;
             System.out.println("\nDepartment: "+i.getDepartment());
@@ -43,11 +48,15 @@ public class StoreTester {
             System.out.println("Item Name: "+h.getItemName());
             System.out.println("Price: $"+h.getPrice());
 
+            //end program
             System.out.println("\nThank you! This is a wonderful menu," +
                     " I'll let Mr Business-Owner know, have a good day!");
-        } else {
+        }
+        //cancel program
+        else {
             System.out.println("Oh, okay. Maybe next time then!");
         }
+        //close scanner
         sc.close();
     }
 }
